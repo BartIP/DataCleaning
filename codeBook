@@ -1,6 +1,6 @@
 Data "cookbook" for project Getting and Cleaning Data course project:
 
-The tidy_data.txt data file is a text file, containing space-separated values, created by getting and transforming data from web downloaded .
+The tidy.txt data file is a text file, containing space-separated values, created by getting and transforming data from web downloaded .
 
 The first row contains the names of the variables, which are listed and described in the Variables section, and the following rows contain the values of these variables.
 
@@ -44,4 +44,4 @@ The initial f and t were expanded to frequencyDomain and timeDomain respectively
 Acc, Gyro, Mag, Freq, mean, and std were replaced with Accelerometer, Gyroscope, Magnitude, Frequency, Mean, and StandardDeviation respectively.
 Replaced (supposedly incorrect as per source's features_info.txt file) BodyBody with Body.
 The final data set was created with the average of each variable for each activity and each subject.
-The collection of the source data and the transformations listed above were implemented by the runanalysis.R R script.
+The collection of the source data and the transformations listed above were implemented by the run_analysis.R R script.
