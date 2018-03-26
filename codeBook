@@ -1,0 +1,47 @@
+Data "cookbook" for project Getting and Cleaning Data course project:
+
+The tidy_data.txt data file is a text file, containing space-separated values, created by getting and transforming data from web downloaded .
+
+The first row contains the names of the variables, which are listed and described in the Variables section, and the following rows contain the values of these variables.
+
+Variables 
+
+Each row contains, for a given subject and activity, 79 averaged values obtained from Cell Phone.
+
+Identifiers 
+
+subject
+
+Subject identifier, integer, ranges from 1 to 30.
+
+activity
+
+Activity identifier:
+
+WALKING: subject was walking
+WALKING_UPSTAIRS: subject was walking upstairs
+WALKING_DOWNSTAIRS: subject was walking downstairs
+SITTING: subject was sitting
+STANDING: subject was standing
+LAYING: subject was laying
+Average of measurements 
+
+All measurements are floating-point values, normalised and bounded within [-1,1].
+
+Data is obtained from following location in zip file type:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+
+The following transformations were made to the source data:
+
+
+The training and test sets were merged to create one data set.
+The measurements on the mean and standard deviation (i.e. signals containing the strings mean and std) were extracted for each measurement, and the others were discarded.
+The activity identifiers (originally coded as integers between 1 and 6) were replaced with descriptive activity names.
+The variable names were replaced with descriptive variable names (e.g. tBodyAcc-mean()-X was expanded to timeDomainBodyAccelerometerMeanX), using the following set of rules:
+Special characters (i.e. (, ), and -) were removed
+The initial f and t were expanded to frequencyDomain and timeDomain respectively.
+Acc, Gyro, Mag, Freq, mean, and std were replaced with Accelerometer, Gyroscope, Magnitude, Frequency, Mean, and StandardDeviation respectively.
+Replaced (supposedly incorrect as per source's features_info.txt file) BodyBody with Body.
+The final data set was created with the average of each variable for each activity and each subject.
+The collection of the source data and the transformations listed above were implemented by the runanalysis.R R script.
